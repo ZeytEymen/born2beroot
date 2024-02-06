@@ -66,7 +66,43 @@ Ubuntu’nun 7.10 sürümünden itibaren default olarak dahil edilen önemli bir
 ####  Sanal Makina ve Bölümleri
 
     lsblk
-![bölümler](https://hizliresim.com/9po1kgn)
+
+<img src="https://i.hizliresim.com/9po1kgn.jpg">
+
+ 
+
+ - LVM NEDİR
+ LVM, fiziksel disklerden (hard diskler, SSD'ler) mantıksal hacimler oluşturarak esnek bir depolama altyapısı sağlar.
+ Mantıksal hacimler, fiziksel disklerdeki bölümleme sınırlamalarını aşarak daha esnek bir depolama çözümü sunar.
+ ---
+
+####  SUDO
+
+    dpkg -l | grep sudo //sudo yüklü mü kontrolü
+    getent group sudo // sudo grubundakileri gör
+    sudo cat /var/log/sudo/sudo.log // sudo ile yapılan her işlemi kontrol et
+---
+####  UFW
+Linux tabanlı işletim sistemlerinde güvenlik duvarı (firewall) yönetimini basitleştiren bir araçtır. Temel olarak, UFW, sistemde gelen ve giden ağ trafiğini kontrol etmenizi sağlar ve böylece ağ güvenliğini sağlar.
+UFW ile belirli ağ trafiği için kurallar oluşturursunuz. Bu kurallar, hangi tür trafiğin sistem üzerinden geçebileceğini veya engelleneceğini belirtir.
+
+    dpkg -l | grep ufw //yüklü mü
+    systemctl status ufw //aktif mi
+    sudo ufw status //izin verilen portlar
+    sudo ufw status numbered //numaralandırılmıs
+    sudo ufw delete <number> //numaralı olanı sil
+    sudo ufw allow <portnumber> //yeni kural ekle
+---
+####  SSH
+
+  
+SSH (Secure Shell) güvenli ve şifreli bir şekilde bilgisayarlar arasında iletişim sağlayan bir ağ protokolüdür. Uzaktan erişim, dosya aktarımı ve diğer ağ işlevleri için yaygın olarak kullanılır.
+
+    dpkg -l | grep ssh //yüklü mü 
+    systemctl status ssh //aktif mi
+    sudo vim /etc/ssh/sshd_config //açık porta bak
+    ssh <username>@localhost -p 4242 // bawğlan
+
 
 ## Tüm  Kodlar ve Anlamları
 

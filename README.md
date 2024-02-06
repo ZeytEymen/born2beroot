@@ -48,7 +48,25 @@ Ubuntu’nun 7.10 sürümünden itibaren default olarak dahil edilen önemli bir
     sudo chage -l --maxdays<number> <username>
     sudo chage -l --warndays<number> <username>
 
- 
+####  Kullanıcı ve Grup oluşturma , ekleme
+
+    sudo adduser <username> // Kullanıcıyı yönergeye göre oluştur
+    id <username> //oluşturuldu mu ???
+    sudo addgroup <groupName> //grup oluştur
+    sudo adduser <username> <groupname> //gruba kullanıcı ekle
+
+----
+####  Ana Bilgisayar adı ve Değiştirme
+
+    sudo hostnamectl //bilgisayar adı işletim sistemi vs bilgiler
+    sudo hostnamectl set-hostname <newHostName> //adı değiştirdik
+    sudo vim /etc/hosts //buradanda değiştiriyoruz
+    //reboot edip tekrar hostnamectl ile kontrol ediyoruz
+---
+####  Sanal Makina ve Bölümleri
+
+    lsblk
+![bölümler](https://hizliresim.com/9po1kgn)
 
 ## Tüm  Kodlar ve Anlamları
 

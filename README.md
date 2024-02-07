@@ -1,4 +1,3 @@
-# born2beroot
 born2beroot - Ecole 42 project
 # born2beroot
 ##  Sanal Makina Nedir, Nasıl Çalışır, Amacı Nedir
@@ -101,7 +100,7 @@ SSH (Secure Shell) güvenli ve şifreli bir şekilde bilgisayarlar arasında ile
     dpkg -l | grep ssh //yüklü mü 
     systemctl status ssh //aktif mi
     sudo vim /etc/ssh/sshd_config //açık porta bak
-    ssh <username>@localhost -p 4242 // bawğlan
+    ssh <username>@localhost -p 4242 // bağlan
 
 
 ## Tüm  Kodlar ve Anlamları
@@ -129,6 +128,17 @@ Yeni Host adı vermek için bu kod yazılır fakat;
 
     vim etc/hosts
 dosyasına erişmeli ve değişikliği burayada uygulamayız, değişiklerin kaydedilmesi için sisteme reset atmak gerekir...
+
+####  requiretty - TTY modu
+TTY modunu aktif eder.Bu komut sadece sudo ön eki ile çalıştırılabilen komutlarda geçerlidir.
+Herhangi bir komut çalıştırmak için açık bir terminal ister. TTY1, PTS/0 gibi.
+Örneğin ;
+
+    //kendi sunucumuz üzerinden bir dosya oluşturalım
+    sudo touch /root deneme.txt //başarı ile oluşturabilmemiz gerek
+    // daha sonra buna benzer bir kodu ssh ile oturum açmadan direkt komut göndererek girelim
+    ssh <username>@localhost -p 4242 "sudo touch /root ttyModAktif.txt"
+    // şifreyi girdikten sonra tty modu akitf ise şöyle bir hata almamız gerek "sudo: sorry, you must have a tty to run sudo"
 
 ##  Kullanıcı ve Grup
 
@@ -219,3 +229,4 @@ SSH ile bağlandı isen sonlandır
 
     who
 SSH ile bağlandığın zaman sanal makinadan terminale kimler hangi şekilde bağlı görebiliriz.
+

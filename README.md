@@ -22,6 +22,9 @@ gibi birçok sebeple kullanılabilir.
 
 ##  APPArmor Nedir
 Ubuntu’nun 7.10 sürümünden itibaren default olarak dahil edilen önemli bir güvenlik özelliğidir. Güvenlik politikalarını uygulamak için kullanılan bir güvenlik çerçevesidir. Temel olarak, uygulamaların ve süreçlerin belirli kaynaklara (dosyalar, klasörler, ağ bağlantıları vb.) erişimini sınırlar ve izler. Bu, kötü niyetli bir yazılımın veya yetkisiz bir kullanıcının sisteme zarar vermesini önler.
+```
+sudo apparmor_status
+```
 
 ####  UFW ve SSH servislerinin durumunu kontrol etme
 
